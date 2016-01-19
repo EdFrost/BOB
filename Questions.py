@@ -34,9 +34,13 @@ def mood():
 def age():
  print "Im 40 years old."
  Age = raw_input("And you?")
- print "Cool!"
+ def Agge():
+  
+  return Age
+  print "Cool!"
  fd.write(Age)
- return
+ Agge()
+ return 
  
 def live():
  print "Im from England"
@@ -83,3 +87,4 @@ def colour():
 def helpme():
     print "this is what you can ask: What does BOB stand for?, How old are you?, How are you?, Where do you live?, Do you have an avatar?, Do you come here often?, Do you play any sports?, What is your favourite food?, What is your favourite colour?"
     return
+

@@ -74,6 +74,8 @@ while question :
   break
  elif matchPhrase(question, d):
   Questions.age()
+  Age = ET.SubElement(user, Questions.age)
+
   break
  elif matchPhrase(question, e) :
   Questions.mood()
@@ -196,7 +198,7 @@ while question :
   break
   
 user = ET.Element(name)
-#b = ET.SubElement(user, 'b')
+Age = ET.SubElement(user, Age)
 #c = ET.SubElement(user, 'c')
 #d = ET.SubElement(user, 'd')
 tree.write('memory.xml')
