@@ -5,18 +5,10 @@
 # To change this template file, choose Tools | Templates
 # and open the template in the editor.
 
-#---  tab
-
-#while True:
-#--- userInput = input(">>> ")
-#userInput = str(input(">>> "))
-#------ print("Hello")
-#--- else:
-#------ print("I did not understand what you said")
 import Questions
-#import xml.etree.ElementTree as ET
-#tree = ET.parse('memory.xml')
-#root = tree.getroot()
+import xml.etree.ElementTree as ET
+tree = ET.parse('memory.xml')
+root = tree.getroot()
 
 def getWords(question) :
     # return a list of ONLY the words from question
@@ -52,7 +44,8 @@ if name in ["your Mother", "your Momma","Your Mother","your momma","Your Momma",
 else:
     print "Hey %s" % (name)
 fd.write(name)
-
+user = ET.SubElement(root, "user")
+user.set('id', name )
 a = ["what", "does", "bob", "stand", "for"]
 b = "8ball"
 c = "randomnumber"
@@ -68,97 +61,7 @@ l = ["what", "is", "your", "favourite", "colour"]
 m = ["help", "me", "master"]
 
 question = raw_input("what do you want to know?, if you need help thinking of something, say: Help Me Master.")
-#BigQuestion = question
-while question :
- if matchPhrase(question, a) :
-  Questions.questionsbob()
-  break
- elif matchPhrase(question , b):
-  Questions.eastereggball()
-  break
- elif matchPhrase(question, c):
-  Questions.eastereggnumber()
-  break
- elif matchPhrase(question, d):
-  Questions.age()
-  break
- elif matchPhrase(question, e) :
-  Questions.mood()
-  break
- elif matchPhrase(question, f) :
-  Questions.live()
-  break
- elif matchPhrase(question, g) :
-  Questions.games()
-  break
- elif matchPhrase(question, h) :
-  Questions.picture()
-  break
- elif matchPhrase(question, i) :
-  Questions.passingby()
-  break
- elif matchPhrase(question, j) :
-  Questions.sports()
-  break
- elif matchPhrase(question, k) :
-  Questions.food()
-  break
- elif matchPhrase(question, l) :
-  Questions.colour()
-  break
- elif matchPhrase(question, m) :
-  Questions.helpme()
-  break
- else:
-  Questions.unknownquestion()
-  break
-#if BigQuestion in Questions.questionsbob:
-#    print ("hai muthafuckah")
-question = raw_input("So, Is there anything else you want to ask?")
-while question :
- if matchPhrase(question, a) :
-  Questions.questionsbob()
-  break
- elif matchPhrase(question , b):
-  Questions.eastereggball()
-  break
- elif matchPhrase(question, c):
-  Questions.eastereggnumber()
-  break
- elif matchPhrase(question, d):
-  Questions.age()
-  break
- elif matchPhrase(question, e) :
-  Questions.mood()
-  break
- elif matchPhrase(question, f) :
-  Questions.live()
-  break
- elif matchPhrase(question, g) :
-  Questions.games()
-  break
- elif matchPhrase(question, h) :
-  Questions.picture()
-  break
- elif matchPhrase(question, i) :
-  Questions.passingby()
-  break
- elif matchPhrase(question, j) :
-  Questions.sports()
-  break
- elif matchPhrase(question, k) :
-  Questions.food()
-  break
- elif matchPhrase(question, l) :
-  Questions.colour()
-  break
- elif matchPhrase(question, m) :
-  Questions.helpme()
-  break
- else:
-  Questions.unknownquestion()
-  break
-question = raw_input("So, Is there anything else you want to ask?")
+
 while question :
  if matchPhrase(question, a) :
   Questions.questionsbob()
@@ -203,8 +106,103 @@ while question :
   Questions.unknownquestion()
   break
 
-byebye = raw_input("Okay, i have to go sadly. Bye.")
+question = raw_input("So, Is there anything else you want to ask?")
+while question :
+ if matchPhrase(question, a) :
+  Questions.questionsbob()
+  break
+ elif matchPhrase(question , b):
+  Questions.eastereggball()
+  break
+ elif matchPhrase(question, c):
+  Questions.eastereggnumber()
+  break
+ elif matchPhrase(question, d):
+  Questions.age()
+  break
+ elif matchPhrase(question, e) :
+  Questions.mood()
+  break
+ elif matchPhrase(question, f) :
+  Questions.live()
+  break
+ elif matchPhrase(question, g) :
+  Questions.games()
+  break
+ elif matchPhrase(question, h) :
+  Questions.picture()
+  break
+ elif matchPhrase(question, i) :
+  Questions.passingby()
+  break
+ elif matchPhrase(question, j) :
+  Questions.sports()
+  break
+ elif matchPhrase(question, k) :
+  Questions.food()
+  break
+ elif matchPhrase(question, l) :
+  Questions.colour()
+  break
+ elif matchPhrase(question, m) :
+  Questions.helpme()
+  break
+ else:
+  Questions.unknownquestion()
+  break
+question = raw_input("So, Is there anything else you want to ask?")
+while question :
+ if matchPhrase(question, a) :
+  Questions.questionsbob()
+  break
+ elif matchPhrase(question , b):
+  Questions.eastereggball()
+  break
+ elif matchPhrase(question, c):
+  Questions.eastereggnumber()
+  break
+ elif matchPhrase(question, d):
+  Questions.age()
+  break
+ elif matchPhrase(question, e) :
+  Questions.mood()
+  break
+ elif matchPhrase(question, f) :
+  Questions.live()
+  break
+ elif matchPhrase(question, g) :
+  Questions.games()
+  break
+ elif matchPhrase(question, h) :
+  Questions.picture()
+  break
+ elif matchPhrase(question, i) :
+  Questions.passingby()
+  break
+ elif matchPhrase(question, j) :
+  Questions.sports()
+  break
+ elif matchPhrase(question, k) :
+  Questions.food()
+  break
+ elif matchPhrase(question, l) :
+  Questions.colour()
+  break
+ elif matchPhrase(question, m) :
+  Questions.helpme()
+  break
+ else:
+  Questions.unknownquestion()
+  break
+  
+user = ET.Element(name)
+#b = ET.SubElement(user, 'b')
+#c = ET.SubElement(user, 'c')
+#d = ET.SubElement(user, 'd')
+tree.write('memory.xml')
+print"Okay %s, thats all you can ask.... Come back another time please...." % (name)
+byebye = raw_input("Bye.")
 fd.close()
-#print"so $s, thats all you can ask.... come back another time please...." % (name)
-#wat is het weer? hoelaat is het?
+
+#How is the weather?, What time is it?
 
