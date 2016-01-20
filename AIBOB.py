@@ -4,7 +4,7 @@
 # To change this license header, choose License Headers in Project Properties.
 # To change this template file, choose Tools | Templates
 # and open the template in the editor.
-
+import sys
 import Questions
 import xml.etree.ElementTree as ET
 tree = ET.ElementTree('memory.xml')
@@ -83,32 +83,69 @@ while question :
   tree.write('memory.xml')
   break
  elif matchPhrase(question, e) :
-  Questions.mood()
+  Feels = Questions.mood()
+  
+  Feel = ET.SubElement(user, "Mood")
+  Feel.text=str(Feels)
+  Feel.set('id', "mood =")
+  tree.write('memory.xml')
   break
  elif matchPhrase(question, f) :
-  Questions.live()
+  Country = Questions.live()
+  
+  Living = ET.SubElement(user, "Country")
+  Living.text=str(Country)
+  Living.set('id', "Country =")
+  tree.write('memory.xml')
   break
  elif matchPhrase(question, g) :
-  Questions.games()
+  Games = Questions.games()
+  
+  Game = ET.SubElement(user, "Games")
+  Game.text=str(Games)
+  Game.set('id', "Games =")
+  tree.write('memory.xml')
   break
  elif matchPhrase(question, h) :
   Questions.picture()
   break
  elif matchPhrase(question, i) :
-  Questions.passingby()
+  Passing = Questions.passingby()
+  
+  Pass = ET.SubElement(user, "Regular")
+  Pass.text=str(Passing)
+  Pass.set('id', "Regular visitor? =")
+  tree.write('memory.xml')
   break
  elif matchPhrase(question, j) :
-  Questions.sports()
+  Sport = Questions.sports()
+  
+  sporting = ET.SubElement(user, "Sports")
+  sporting.text=str(Sport)
+  sporting.set('id', "Sports =")
+  tree.write('memory.xml')
   break
  elif matchPhrase(question, k) :
-  Questions.food()
+  Food = Questions.food()
+  
+  foood = ET.SubElement(user, "Food")
+  foood.text=str(Food)
+  foood.set('id', "Food =")
+  tree.write('memory.xml')
   break
  elif matchPhrase(question, l) :
-  Questions.colour()
+  colourst = Questions.colour()
+  
+  Colour = ET.SubElement(user, "Colour")
+  Colour.text=str(colourst)
+  Colour.set('id', "Colour =")
+  tree.write('memory.xml')
   break
  elif matchPhrase(question, m) :
   Questions.helpme()
   break
+ elif question in ["No","no"]:
+     sys.exit("Bye.")
  else:
   Questions.unknownquestion()
   break
@@ -125,35 +162,72 @@ while question :
   Questions.eastereggnumber()
   break
  elif matchPhrase(question, d):
-  Questions.age()
+  Ages = Questions.age()
+  
+  Age = ET.SubElement(user, "Age")
+  Age.text=str(Ages)
+  Age.set('id', "Age =")
+  tree.write('memory.xml')
   break
  elif matchPhrase(question, e) :
-  Questions.mood()
+  Feels = Questions.mood()
+  Feel = ET.SubElement(user, "Mood")
+  Feel.text=str(Feels)
+  Feel.set('id', "mood =")
+  tree.write('memory.xml')
   break
  elif matchPhrase(question, f) :
-  Questions.live()
+  Country = Questions.live()
+  Living = ET.SubElement(user, "Country")
+  Living.text=str(Country)
+  Living.set('id', "Country =")
+  tree.write('memory.xml')
   break
  elif matchPhrase(question, g) :
-  Questions.games()
+  Games = Questions.games()
+  
+  Game = ET.SubElement(user, "Games")
+  Game.text=str(Games)
+  Game.set('id', "Games =")
+  tree.write('memory.xml')
   break
  elif matchPhrase(question, h) :
   Questions.picture()
   break
  elif matchPhrase(question, i) :
-  Questions.passingby()
+  Passing = Questions.passingby()
+  
+  Pass = ET.SubElement(user, "Regular")
+  Pass.text=str(Passing)
+  Pass.set('id', "Regular visitor? =")
+  tree.write('memory.xml')
   break
  elif matchPhrase(question, j) :
-  Questions.sports()
+  Sport = Questions.sports()
+  sporting = ET.SubElement(user, "Sports")
+  sporting.text=str(Sport)
+  sporting.set('id', "Sports =")
+  tree.write('memory.xml')
   break
  elif matchPhrase(question, k) :
-  Questions.food()
+  Food = Questions.food()
+  foood = ET.SubElement(user, "Food")
+  foood.text=str(Food)
+  foood.set('id', "Food =")
+  tree.write('memory.xml')
   break
  elif matchPhrase(question, l) :
-  Questions.colour()
+  colours = Questions.colour()
+  Colour = ET.SubElement(user, "Colour")
+  Colour.text=str(colours)
+  Colour.set('id', "Colour =")
+  tree.write('memory.xml')
   break
  elif matchPhrase(question, m) :
   Questions.helpme()
   break
+ elif question in ["No","no"]:
+     sys.exit("Bye.")
  else:
   Questions.unknownquestion()
   break
@@ -169,35 +243,72 @@ while question :
   Questions.eastereggnumber()
   break
  elif matchPhrase(question, d):
-  Questions.age()
+  Ages = Questions.age()
+  
+  Age = ET.SubElement(user, "Age")
+  Age.text=str(Ages)
+  Age.set('id', "Age =")
+  tree.write('memory.xml')
   break
  elif matchPhrase(question, e) :
-  Questions.mood()
+  Feels = Questions.mood()
+  Feel = ET.SubElement(user, "Mood")
+  Feel.text=str(Feels)
+  Feel.set('id', "mood =")
+  tree.write('memory.xml')
   break
  elif matchPhrase(question, f) :
-  Questions.live()
+  Country = Questions.live()
+  Living = ET.SubElement(user, "Country")
+  Living.text=str(Country)
+  Living.set('id', "Country =")
+  tree.write('memory.xml')
   break
  elif matchPhrase(question, g) :
-  Questions.games()
+  Games = Questions.games()
+  
+  Game = ET.SubElement(user, "Games")
+  Game.text=str(Games)
+  Game.set('id', "Games =")
+  tree.write('memory.xml')
   break
  elif matchPhrase(question, h) :
   Questions.picture()
   break
  elif matchPhrase(question, i) :
-  Questions.passingby()
+  Passing = Questions.passingby()
+  
+  Pass = ET.SubElement(user, "Regular")
+  Pass.text=str(Passing)
+  Pass.set('id', "Regular visitor? =")
+  tree.write('memory.xml')
   break
  elif matchPhrase(question, j) :
-  Questions.sports()
+  Sport = Questions.sports()
+  sporting = ET.SubElement(user, "Sports")
+  sporting.text=str(Sport)
+  sporting.set('id', "Sports =")
+  tree.write('memory.xml')
   break
  elif matchPhrase(question, k) :
-  Questions.food()
+  Food = Questions.food()
+  foood = ET.SubElement(user, "Food")
+  foood.text=str(Food)
+  foood.set('id', "Food =")
+  tree.write('memory.xml')
   break
  elif matchPhrase(question, l) :
-  Questions.colour()
+  colours = Questions.colour()
+  Colour = ET.SubElement(user, "Colour")
+  Colour.text=str(colours)
+  Colour.set('id', "Colour =")
+  tree.write('memory.xml')
   break
  elif matchPhrase(question, m) :
   Questions.helpme()
   break
+ elif question in ["No","no"]:
+     sys.exit("Bye.")
  else:
   Questions.unknownquestion()
   break
@@ -211,5 +322,5 @@ print"Okay %s, thats all you can ask.... Come back another time please...." % (n
 byebye = raw_input("Bye.")
 fd.close()
 
-#How is the weather?, What time is it?
+#How is the weather?, What time is it? When is your birthday?(make him say happy birthday on that date)
 

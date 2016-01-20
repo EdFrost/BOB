@@ -12,7 +12,7 @@ def questionsbob():
   return
 
 def eastereggball():
- ball = ["Yes", "The answer you seek is 84", "Yes + Yes = No", "No + No = Yes", "No of course not!", "I dont think so.", "Maaaaaaaaaaaaaaaaaybe.","No."]
+ ball = ["Yes", "Eh.. The answer you seek is 84", "Yes + Yes = No", "No + No = Yes", "No of course not!", "I dont think so.", "Maaaaaaaaaaaaaaaaaybe.","No.","Perhaps...","Most Definitively!","Not so sure about this one.","What? Of Course!"]
  random_item = random.choice(ball)
  print random_item
  return
@@ -29,7 +29,7 @@ def mood():
  Mood = raw_input("And you?")
  print "okay, good for you i guess"
  fd.write(Mood)
- return
+ return Mood
  
 def age(  ):
  print "Im 40 years old."
@@ -43,14 +43,14 @@ def live():
  Country = raw_input("And you?")
  print "cool"
  fd.write(Country)
- return
+ return Country
  
 def games():
  print "All KeenSoftwareHouse games"
  Games = raw_input("And yours?")
  print "Those are cool too"
  fd.write(Games)
- return
+ return Games
  
 def picture():
     print "No, Im a bot.... Bots dont need pictures"
@@ -59,27 +59,27 @@ def picture():
 
 def passingby():
     print "Well, every now and then"
-    question = raw_input("And you?")
+    passing = raw_input("And you?")
     print "Well, be safe, dont talk with strangers."
-    return
+    return passing
 
 def sports():
     print "Bots dont do sports"
-    question = raw_input("And you?")
+    sport = raw_input("And you?")
     print "Well, dont break your bones"
-    return
+    return sport
 
 def food():
     print "Sadly bots dont need food"
-    question = raw_input("And yours?")
+    foood = raw_input("And yours?")
     print "Sounds yummie"
-    return
+    return foood
 
 def colour():
     print "Black with green letters on it."
-    question = raw_input("And yours?")
+    colourst = raw_input("And yours?")
     print "Thats also a nice colour."
-    return
+    return colourst
 def helpme():
     print "this is what you can ask: What does BOB stand for?, How old are you?, How are you?, Where do you live?, Do you have an avatar?, Do you come here often?, Do you play any sports?, What is your favourite food?, What is your favourite colour?"
     return
