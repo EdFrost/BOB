@@ -31,16 +31,12 @@ def mood():
  fd.write(Mood)
  return
  
-def age():
+def age(  ):
  print "Im 40 years old."
  Age = raw_input("And you?")
- def Agge():
-  
-  return Age
-  print "Cool!"
+ print "Cool!"
  fd.write(Age)
- Agge()
- return 
+ return Age
  
 def live():
  print "Im from England"

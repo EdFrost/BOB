@@ -7,7 +7,8 @@
 
 import Questions
 import xml.etree.ElementTree as ET
-tree = ET.parse('memory.xml')
+tree = ET.ElementTree('memory.xml')
+tree.parse('memory.xml')
 root = tree.getroot()
 
 def getWords(question) :
@@ -46,6 +47,7 @@ else:
 fd.write(name)
 user = ET.SubElement(root, "user")
 user.set('id', name )
+
 a = ["what", "does", "bob", "stand", "for"]
 b = "8ball"
 c = "randomnumber"
@@ -73,9 +75,12 @@ while question :
   Questions.eastereggnumber()
   break
  elif matchPhrase(question, d):
-  Questions.age()
-  Age = ET.SubElement(user, Questions.age)
-
+  Ages = Questions.age()
+  
+  Age = ET.SubElement(user, "Age")
+  Age.text=str(Ages)
+  Age.set('id', "Age =")
+  tree.write('memory.xml')
   break
  elif matchPhrase(question, e) :
   Questions.mood()
@@ -197,8 +202,8 @@ while question :
   Questions.unknownquestion()
   break
   
-user = ET.Element(name)
-Age = ET.SubElement(user, Age)
+
+
 #c = ET.SubElement(user, 'c')
 #d = ET.SubElement(user, 'd')
 tree.write('memory.xml')
