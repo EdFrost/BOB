@@ -5,6 +5,7 @@
 # To change this template file, choose Tools | Templates
 # and open the template in the editor.
 import sys
+import Games
 import Questions
 import xml.etree.ElementTree as ET
 tree = ET.ElementTree('memory.xml')
@@ -62,6 +63,8 @@ k = ["what", "is", "your", "favourite", "food"]
 l = ["what", "is", "your", "favourite", "colour"]
 m = ["help", "me", "master"]
 n = ["tell", "me", "a", "joke"]
+o = ["lets","play","rock","paper","sissors"]
+p= ["lets","play","tic","tac","toe"]
 
 question = raw_input("what do you want to know?, if you need help thinking of something, say: Help Me Master.")
 
@@ -150,6 +153,12 @@ while question :
  elif matchPhrase(question, n) :
   Questions.jokes()
   break
+ elif matchPhrase(question, o) :
+  Games.RPS()
+  break
+ elif matchPhrase(question, p) :
+  Games.ttc()
+  break
  else:
   Questions.unknownquestion()
   break
@@ -232,6 +241,12 @@ while question :
   break
  elif matchPhrase(question, n) :
   Questions.jokes()
+  break
+ elif matchPhrase(question, o) :
+  Games.RPS()
+  break
+ elif matchPhrase(question, p) :
+  Games.ttc()
   break
  elif question in ["No","no"]:
      sys.exit("Bye.")
@@ -316,6 +331,12 @@ while question :
   break
  elif matchPhrase(question, n) :
   Questions.jokes()
+  break
+ elif matchPhrase(question, o) :
+  Games.RPS()
+  break
+ elif matchPhrase(question, p) :
+  Games.ttc()
   break
  elif question in ["No","no"]:
      sys.exit("Bye.")
