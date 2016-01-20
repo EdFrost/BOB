@@ -1,0 +1,54 @@
+<root>
+    <response>
+        <question>Question text goes here</question>
+        <answers>
+            <answer>a1</answer>
+            <answer>a2</answer>
+        </answers>
+    </response>
+    <response>
+        <question>what does bob stand for</question>
+        <answers>
+            <answer>BOB stands for Binairy Observant Bot</answer>
+        </answers>
+    </response>
+    <response>
+        <question>8ball</question>
+        <answers>
+            <answer>Yes</answer>
+            <answer>Eh.. The answer you seek is 84</answer>
+            <answer>Yes + Yes = No</answer>
+            <answer>No + No = Yes</answer>
+            <answer>No of course not!</answer>
+            <answer>I dont think so.</answer>
+            <answer>Maaaaaaaaaaaaaaaaaybe.</answer>
+            <answer>No.</answer>
+            <answer>nopers</answer>
+            <answer>Perhaps...</answer>
+            <answer>Most Definitively!</answer>
+            <answer>Not so sure about this one.</answer>
+            <answer>What? Of Course!</answer>
+        </answers>
+    </response>
+    <response>
+        <question>do you have an avatar</question>
+        <answers>
+            <answer>No, Im a bot.... Bots dont need pictures. You humans do need them, dont you?</answer>
+        </answers>
+    </response>
+    <response>
+        <question>tell me a joke</question>
+        <answers>
+            <answer>Heaven is Where: the Police are British, the Chefs are Italian, the Mechanics are German, the Lovers are French and it's all organized by the Swiss. Hell is Where: the Police are German, the Chefs are British, the Mechanics are French, the Lovers are Swiss and it's all organized by the Italians.</answer>
+            <answer>Life is just one damned thing after another.</answer>
+            <answer>Well, the telling of jokes is an art of its own, and it always rises from some emotional threat. The best jokes are dangerous, and dangerous because they are in some way truthful."</answer>
+            <answer>Life does not cease to be funny when people die any more than it ceases to be serious when people laugh</answer>
+            <answer>Chaos in the midst of chaos isn't funny, but chaos in the midst of order is.</answer>
+            <answer>I think it's the duty of the comedian to find out where the line is drawn and cross it deliberately.</answer>
+            <answer>You can turn painful situations around through laughter. If you can find humor in anything, even poverty, you can survive it.</answer>
+            <answer>The secret to humor is surprise.</answer>
+            <answer>There are 2 main problems in computer science:  1) Naming things.   2) Cache invalidation.  3) off by 1 errors</answer>
+        </answers>
+    </response>
+
+</root>
