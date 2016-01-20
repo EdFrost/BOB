@@ -61,6 +61,7 @@ j = ["do", "you", "play", "any", "sports"]
 k = ["what", "is", "your", "favourite", "food"]
 l = ["what", "is", "your", "favourite", "colour"]
 m = ["help", "me", "master"]
+n = ["tell", "me", "a", "joke"]
 
 question = raw_input("what do you want to know?, if you need help thinking of something, say: Help Me Master.")
 
@@ -146,6 +147,9 @@ while question :
   break
  elif question in ["No","no"]:
      sys.exit("Bye.")
+ elif matchPhrase(question, n) :
+  Questions.jokes()
+  break
  else:
   Questions.unknownquestion()
   break
@@ -225,6 +229,9 @@ while question :
   break
  elif matchPhrase(question, m) :
   Questions.helpme()
+  break
+ elif matchPhrase(question, n) :
+  Questions.jokes()
   break
  elif question in ["No","no"]:
      sys.exit("Bye.")
@@ -306,6 +313,9 @@ while question :
   break
  elif matchPhrase(question, m) :
   Questions.helpme()
+  break
+ elif matchPhrase(question, n) :
+  Questions.jokes()
   break
  elif question in ["No","no"]:
      sys.exit("Bye.")

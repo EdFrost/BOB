@@ -81,6 +81,11 @@ def colour():
     print "Thats also a nice colour."
     return colourst
 def helpme():
-    print "this is what you can ask: What does BOB stand for?, How old are you?, How are you?, Where do you live?, Do you have an avatar?, Do you come here often?, Do you play any sports?, What is your favourite food?, What is your favourite colour?"
+    print "this is what you can ask: What does BOB stand for?, How old are you?, How are you?, Where do you live?, Do you have an avatar?, Do you come here often?, Do you play any sports?, What is your favourite food?, What is your favourite colour?, Tell me a joke."
     return
 
+def jokes():
+    goodjoke = ["Heaven is Where: the Police are British, the Chefs are Italian, the Mechanics are German, the Lovers are French and it's all organized by the Swiss. Hell is Where: the Police are German, the Chefs are British, the Mechanics are French, the Lovers are Swiss and it's all organized by the Italians.","Life is just one damned thing after another.", "Well, the telling of jokes is an art of its own, and it always rises from some emotional threat. The best jokes are dangerous, and dangerous because they are in some way truthful.","Life does not cease to be funny when people die any more than it ceases to be serious when people laugh.", "Chaos in the midst of chaos isn't funny, but chaos in the midst of order is.","I think it's the duty of the comedian to find out where the line is drawn and cross it deliberately.","You can turn painful situations around through laughter. If you can find humor in anything, even poverty, you can survive it.","The secret to humor is surprise." ]
+    random_item = random.choice(goodjoke)
+    print random_item
+    return
