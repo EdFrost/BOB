@@ -36,15 +36,112 @@ def matchPhrase(question, phrase) :
            return False
     return True
 
+def answerQuestion(question) :
+    while question :
+     if matchPhrase(question, a) :
+      Questions.questionsbob()
+      break
+     elif matchPhrase(question , b):
+      Questions.eastereggball()
+      break
+     elif matchPhrase(question, c):
+      Questions.eastereggnumber()
+      break
+     elif matchPhrase(question, d):
+      Ages = Questions.age()
+
+      Age = ET.SubElement(user, "Age")
+      Age.text=str(Ages)
+      Age.set('id', "Age =")
+      tree.write('memory.xml')
+      break
+     elif matchPhrase(question, e) :
+      Feels = Questions.mood()
+
+      Feel = ET.SubElement(user, "Mood")
+      Feel.text=str(Feels)
+      Feel.set('id', "mood =")
+      tree.write('memory.xml')
+      break
+     elif matchPhrase(question, f) :
+      Country = Questions.live()
+
+      Living = ET.SubElement(user, "Country")
+      Living.text=str(Country)
+      Living.set('id', "Country =")
+      tree.write('memory.xml')
+      break
+     elif matchPhrase(question, g) :
+
+      Game = ET.SubElement(user, "Games")
+      Game.text=str(Games)
+      Game.set('id', "Games =")
+      tree.write('memory.xml')
+      break
+     elif matchPhrase(question, h) :
+      Questions.picture()
+      break
+     elif matchPhrase(question, i) :
+      Passing = Questions.passingby()
+
+      Pass = ET.SubElement(user, "Regular")
+      Pass.text=str(Passing)
+      Pass.set('id', "Regular visitor? =")
+      tree.write('memory.xml')
+      break
+     elif matchPhrase(question, j) :
+      Sport = Questions.sports()
+
+      sporting = ET.SubElement(user, "Sports")
+      sporting.text=str(Sport)
+      sporting.set('id', "Sports =")
+      tree.write('memory.xml')
+      break
+     elif matchPhrase(question, k) :
+      Food = Questions.food()
+
+      foood = ET.SubElement(user, "Food")
+      foood.text=str(Food)
+      foood.set('id', "Food =")
+      tree.write('memory.xml')
+      break
+     elif matchPhrase(question, l) :
+      colourst = Questions.colour()
+
+      Colour = ET.SubElement(user, "Colour")
+      Colour.text=str(colourst)
+      Colour.set('id', "Colour =")
+      tree.write('memory.xml')
+      break
+     elif matchPhrase(question, m) :
+      Questions.helpme()
+      break
+     elif question in ["No","no"]:
+         sys.exit("Bye.")
+     elif matchPhrase(question, n) :
+      Questions.jokes()
+      break
+     elif matchPhrase(question, o) :
+      Games.RPS()
+      break
+     elif matchPhrase(question, p) :
+      Games.ttc()
+      break
+     else:
+      Questions.unknownquestion()
+      break
+
 fd = open('memory',"a+")
 
 print "Hello, my name is BOB"
 name = raw_input("What is your name?")
-if name in ["your Mother", "your Momma","Your Mother","your momma","Your Momma","your mother"]:
- question = raw_input("Your momma who?")
- print "I get what you mean."
+if matchPhrase(name, ['your','mom']) or \
+     matchPhrase(name, ['your','mother'] or \
+     matchPhrase(name, ['your','momma'])):
+   question = raw_input("Your momma who?")
+   print "I get what you mean."
 else:
-    print "Hey %s" % (name)
+   print "Hey", name
 fd.write(name)
 user = ET.SubElement(root, "user")
 user.set('id', name )
@@ -67,283 +164,13 @@ o = ["lets","play","rock","paper","sissors"]
 p= ["lets","play","tic","tac","toe"]
 
 question = raw_input("what do you want to know?, if you need help thinking of something, say: Help Me Master.")
-
-while question :
- if matchPhrase(question, a) :
-  Questions.questionsbob()
-  break
- elif matchPhrase(question , b):
-  Questions.eastereggball()
-  break
- elif matchPhrase(question, c):
-  Questions.eastereggnumber()
-  break
- elif matchPhrase(question, d):
-  Ages = Questions.age()
-  
-  Age = ET.SubElement(user, "Age")
-  Age.text=str(Ages)
-  Age.set('id', "Age =")
-  tree.write('memory.xml')
-  break
- elif matchPhrase(question, e) :
-  Feels = Questions.mood()
-  
-  Feel = ET.SubElement(user, "Mood")
-  Feel.text=str(Feels)
-  Feel.set('id', "mood =")
-  tree.write('memory.xml')
-  break
- elif matchPhrase(question, f) :
-  Country = Questions.live()
-  
-  Living = ET.SubElement(user, "Country")
-  Living.text=str(Country)
-  Living.set('id', "Country =")
-  tree.write('memory.xml')
-  break
- elif matchPhrase(question, g) :
-  Games = Questions.games()
-  
-  Game = ET.SubElement(user, "Games")
-  Game.text=str(Games)
-  Game.set('id', "Games =")
-  tree.write('memory.xml')
-  break
- elif matchPhrase(question, h) :
-  Questions.picture()
-  break
- elif matchPhrase(question, i) :
-  Passing = Questions.passingby()
-  
-  Pass = ET.SubElement(user, "Regular")
-  Pass.text=str(Passing)
-  Pass.set('id', "Regular visitor? =")
-  tree.write('memory.xml')
-  break
- elif matchPhrase(question, j) :
-  Sport = Questions.sports()
-  
-  sporting = ET.SubElement(user, "Sports")
-  sporting.text=str(Sport)
-  sporting.set('id', "Sports =")
-  tree.write('memory.xml')
-  break
- elif matchPhrase(question, k) :
-  Food = Questions.food()
-  
-  foood = ET.SubElement(user, "Food")
-  foood.text=str(Food)
-  foood.set('id', "Food =")
-  tree.write('memory.xml')
-  break
- elif matchPhrase(question, l) :
-  colourst = Questions.colour()
-  
-  Colour = ET.SubElement(user, "Colour")
-  Colour.text=str(colourst)
-  Colour.set('id', "Colour =")
-  tree.write('memory.xml')
-  break
- elif matchPhrase(question, m) :
-  Questions.helpme()
-  break
- elif question in ["No","no"]:
-     sys.exit("Bye.")
- elif matchPhrase(question, n) :
-  Questions.jokes()
-  break
- elif matchPhrase(question, o) :
-  Games.RPS()
-  break
- elif matchPhrase(question, p) :
-  Games.ttc()
-  break
- else:
-  Questions.unknownquestion()
-  break
+answerQuestion(question)
 
 question = raw_input("So, Is there anything else you want to ask?")
-while question :
- if matchPhrase(question, a) :
-  Questions.questionsbob()
-  break
- elif matchPhrase(question , b):
-  Questions.eastereggball()
-  break
- elif matchPhrase(question, c):
-  Questions.eastereggnumber()
-  break
- elif matchPhrase(question, d):
-  Ages = Questions.age()
-  
-  Age = ET.SubElement(user, "Age")
-  Age.text=str(Ages)
-  Age.set('id', "Age =")
-  tree.write('memory.xml')
-  break
- elif matchPhrase(question, e) :
-  Feels = Questions.mood()
-  Feel = ET.SubElement(user, "Mood")
-  Feel.text=str(Feels)
-  Feel.set('id', "mood =")
-  tree.write('memory.xml')
-  break
- elif matchPhrase(question, f) :
-  Country = Questions.live()
-  Living = ET.SubElement(user, "Country")
-  Living.text=str(Country)
-  Living.set('id', "Country =")
-  tree.write('memory.xml')
-  break
- elif matchPhrase(question, g) :
-  Games = Questions.games()
-  
-  Game = ET.SubElement(user, "Games")
-  Game.text=str(Games)
-  Game.set('id', "Games =")
-  tree.write('memory.xml')
-  break
- elif matchPhrase(question, h) :
-  Questions.picture()
-  break
- elif matchPhrase(question, i) :
-  Passing = Questions.passingby()
-  
-  Pass = ET.SubElement(user, "Regular")
-  Pass.text=str(Passing)
-  Pass.set('id', "Regular visitor? =")
-  tree.write('memory.xml')
-  break
- elif matchPhrase(question, j) :
-  Sport = Questions.sports()
-  sporting = ET.SubElement(user, "Sports")
-  sporting.text=str(Sport)
-  sporting.set('id', "Sports =")
-  tree.write('memory.xml')
-  break
- elif matchPhrase(question, k) :
-  Food = Questions.food()
-  foood = ET.SubElement(user, "Food")
-  foood.text=str(Food)
-  foood.set('id', "Food =")
-  tree.write('memory.xml')
-  break
- elif matchPhrase(question, l) :
-  colours = Questions.colour()
-  Colour = ET.SubElement(user, "Colour")
-  Colour.text=str(colours)
-  Colour.set('id', "Colour =")
-  tree.write('memory.xml')
-  break
- elif matchPhrase(question, m) :
-  Questions.helpme()
-  break
- elif matchPhrase(question, n) :
-  Questions.jokes()
-  break
- elif matchPhrase(question, o) :
-  Games.RPS()
-  break
- elif matchPhrase(question, p) :
-  Games.ttc()
-  break
- elif question in ["No","no"]:
-     sys.exit("Bye.")
- else:
-  Questions.unknownquestion()
-  break
+answerQuestion(question)
+
 question = raw_input("So, Is there anything else you want to ask?")
-while question :
- if matchPhrase(question, a) :
-  Questions.questionsbob()
-  break
- elif matchPhrase(question , b):
-  Questions.eastereggball()
-  break
- elif matchPhrase(question, c):
-  Questions.eastereggnumber()
-  break
- elif matchPhrase(question, d):
-  Ages = Questions.age()
-  
-  Age = ET.SubElement(user, "Age")
-  Age.text=str(Ages)
-  Age.set('id', "Age =")
-  tree.write('memory.xml')
-  break
- elif matchPhrase(question, e) :
-  Feels = Questions.mood()
-  Feel = ET.SubElement(user, "Mood")
-  Feel.text=str(Feels)
-  Feel.set('id', "mood =")
-  tree.write('memory.xml')
-  break
- elif matchPhrase(question, f) :
-  Country = Questions.live()
-  Living = ET.SubElement(user, "Country")
-  Living.text=str(Country)
-  Living.set('id', "Country =")
-  tree.write('memory.xml')
-  break
- elif matchPhrase(question, g) :
-  Games = Questions.games()
-  
-  Game = ET.SubElement(user, "Games")
-  Game.text=str(Games)
-  Game.set('id', "Games =")
-  tree.write('memory.xml')
-  break
- elif matchPhrase(question, h) :
-  Questions.picture()
-  break
- elif matchPhrase(question, i) :
-  Passing = Questions.passingby()
-  
-  Pass = ET.SubElement(user, "Regular")
-  Pass.text=str(Passing)
-  Pass.set('id', "Regular visitor? =")
-  tree.write('memory.xml')
-  break
- elif matchPhrase(question, j) :
-  Sport = Questions.sports()
-  sporting = ET.SubElement(user, "Sports")
-  sporting.text=str(Sport)
-  sporting.set('id', "Sports =")
-  tree.write('memory.xml')
-  break
- elif matchPhrase(question, k) :
-  Food = Questions.food()
-  foood = ET.SubElement(user, "Food")
-  foood.text=str(Food)
-  foood.set('id', "Food =")
-  tree.write('memory.xml')
-  break
- elif matchPhrase(question, l) :
-  colours = Questions.colour()
-  Colour = ET.SubElement(user, "Colour")
-  Colour.text=str(colours)
-  Colour.set('id', "Colour =")
-  tree.write('memory.xml')
-  break
- elif matchPhrase(question, m) :
-  Questions.helpme()
-  break
- elif matchPhrase(question, n) :
-  Questions.jokes()
-  break
- elif matchPhrase(question, o) :
-  Games.RPS()
-  break
- elif matchPhrase(question, p) :
-  Games.ttc()
-  break
- elif question in ["No","no"]:
-     sys.exit("Bye.")
- else:
-  Questions.unknownquestion()
-  break
-  
+answerQuestion(question)
 
 
 #c = ET.SubElement(user, 'c')
