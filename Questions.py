@@ -4,6 +4,7 @@
 import random
 import xml.etree.ElementTree as ET
 import time
+from Users import *
 responses=[]
 
 class Response() :
@@ -12,6 +13,8 @@ class Response() :
         self.question=''
         self.answers=[]
         self.responseText=None
+        self.memoryKey=None
+        self.replyText=None
 
     def load(self, xmlNode) :
         #load a single response from the xmlNode
@@ -21,6 +24,10 @@ class Response() :
             if item.tag == 'answers' :
                for answerNode in item :
                    self.answers.append(answerNode.text)
+            if item.tag == 'responseText' :
+               self.responseText=item.text
+               self.memoryKey = item.attrib.get('memoryKey')
+               self.replyText = item.attrib.get('replyText')
 
     def save(self,rootNode) :
         #add this response to the xml node
@@ -34,10 +41,16 @@ class Response() :
         choice = random.choice(self.answers)
         print(choice)
 
-    def handleAnswer(self) :
+    def handleAnswer(self, user) :
         self.printAnswer()
         if self.responseText is None :
            return True
+        answer=raw_input(self.responseText)
+        if self.memoryKey is not None :
+           user.setAttribute(self.memoryKey, answer)
+        if self.replyText is not None :
+           print(self.replyText)
+
 
 def loadReponses(filename) :
     #load up all the question / response pairs from filename
@@ -73,7 +86,7 @@ def matchPhrase(question, phrase) :
            return False
     return True
 
-def answerQuestionFromXML(question) :
+def answerQuestionFromXML(question, user) :
     # return False if there is no xml answer for this question
     # otherwise
     #    -- if the question has a followup, display that and return the response
@@ -81,7 +94,7 @@ def answerQuestionFromXML(question) :
 
     for response in responses :
         if matchPhrase(question, response.question) :
-           return response.handleAnswer()
+           return response.handleAnswer(user)
     return False
 
 
@@ -115,13 +128,13 @@ def mood():
   print "okay, good for you i guess"
   
   return Mood
- 
-def age(  ):
- print "Im 40 years old."
- Age = raw_input("And you?")
- print "Cool!"
- 
- return Age
+
+# moved to response.xml
+#def age(  ):
+# print "Im 40 years old."
+#Age = raw_input("And you?")
+# print "Cool!"
+# return Age
  
 def live():
  print "Im from England"

@@ -50,5 +50,22 @@
             <answer>There are 2 main problems in computer science:  1) Naming things.   2) Cache invalidation.  3) off by 1 errors</answer>
         </answers>
     </response>
+    <response>
+        <question>how old are you</question>
+        <answers>
+            <answer>Im 40 years old.</answer>
+        </answers>
+        <responseText memoryKey="Age" reply="Cool!">And you?</responseText>
+    </response>
+    <response>
+        <question>how are you</question>
+        <answers>
+            <answer>Im fine.</answer>
+            <answer>Im okay</answer>
+            <answer>I feel a bit sick.</answer>
+            <answer>Why would you care?</answer>
+        </answers>
+        <responseText memoryKey="Mood" reply="okay, good for you i guess">And You?</responseText>
+    </response>
  
 </root>

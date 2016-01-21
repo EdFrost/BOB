@@ -7,7 +7,7 @@
 import sys
 import Games
 import Questions
-import Users
+from Users import *
 import xml.etree.ElementTree as ET
 tree = ET.ElementTree('memory.xml')
 tree.parse('memory.xml')
@@ -39,29 +39,13 @@ def matchPhrase(question, phrase) :
 
 def answerQuestion(question) :
     # first check the xml file for responses
-    if Questions.answerQuestionFromXML(question) :
+    if Questions.answerQuestionFromXML(question, user) :
        return
     # not answered, so keep going
 
     if matchPhrase(question, c):
         Questions.eastereggnumber()
         return
-
-    if matchPhrase(question, d):
-      Ages = Questions.age()
-      Age = ET.SubElement(user, "Age")
-      Age.text=str(Ages)
-      Age.set('id', "Age =")
-      tree.write('memory.xml')
-      return
-
-    if matchPhrase(question, e) :
-      Feels = Questions.mood()
-      Feel = ET.SubElement(user, "Mood")
-      Feel.text=str(Feels)
-      Feel.set('id', "mood =")
-      tree.write('memory.xml')
-      return
 
     if matchPhrase(question, f) :
       Country = Questions.live()
@@ -139,18 +123,18 @@ def answerQuestion(question) :
    
     Questions.unknownquestion()
 
-
 Questions.loadReponses('response.xml')
-
+User.loadUserMemory('memory.xml')
 
 print "Hello, my name is BOB"
 name = raw_input("What is your name?")
-if name in Users.users:
-  user = name
-elif name not in Users.users:
-  user = ET.SubElement(root, "user")
-  user.set('id', name )
-    
+user = User.find(name)
+if user is None :
+   user = User.newUser(name)
+
+#update name from actual user db to fix any caps problems
+name = user.name
+
 if matchPhrase(name, ['your','mom']) or \
      matchPhrase(name, ['your','mother'] or \
      matchPhrase(name, ['your','momma'])):
@@ -159,15 +143,12 @@ if matchPhrase(name, ['your','mom']) or \
 else:
    print "Hey", name
 
- 
-
-
 
 a = ["what","is","the","date"]
 #b = "8ball"
 c = "randomnumber"
-d = ["how", "old", "are", "you"]
-e = ["how", "are", "you"]
+#d = ["how", "old", "are", "you"]
+#e = ["how", "are", "you"]
 f = ["where", "do", "you", "live"]
 g = ["what", "games", "do", "you", "play"]
 h = ["how","late","is","it"]
