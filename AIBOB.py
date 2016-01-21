@@ -128,7 +128,7 @@ def answerQuestion(question) :
 
 
 Questions.loadReponses('response.xml')
-fd = open('memory',"a+")
+
 
 print "Hello, my name is BOB"
 name = raw_input("What is your name?")
@@ -139,7 +139,7 @@ if matchPhrase(name, ['your','mom']) or \
    print "I get what you mean."
 else:
    print "Hey", name
-fd.write(name)
+
 user = ET.SubElement(root, "user")
 user.set('id', name )
 
@@ -169,13 +169,21 @@ answerQuestion(question)
 question = raw_input("So, Is there anything else you want to ask?")
 answerQuestion(question)
 
+question = raw_input("So, Is there anything else you want to ask?")
+answerQuestion(question)
+
+question = raw_input("So, Is there anything else you want to ask?")
+answerQuestion(question)
+
+question = raw_input("So, Is there anything else you want to ask?")
+answerQuestion(question)
 
 #c = ET.SubElement(user, 'c')
 #d = ET.SubElement(user, 'd')
 tree.write('memory.xml')
 print"Okay %s, thats all you can ask.... Come back another time please...." % (name)
 byebye = raw_input("Bye.")
-fd.close()
+
 
 #How is the weather?, What time is it? When is your birthday?(make him say happy birthday on that date)
 

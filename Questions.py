@@ -80,7 +80,7 @@ def answerQuestionFromXML(question) :
            return response.handleAnswer()
     return False
 
-fd = open('memory',"a+")
+
 
 def unknownquestion():
  print "Sorry, I dont know what you mean"
@@ -109,28 +109,28 @@ def mood():
   print random_item
   Mood = raw_input("And you?")
   print "okay, good for you i guess"
-  fd.write(Mood)
+  
   return Mood
  
 def age(  ):
  print "Im 40 years old."
  Age = raw_input("And you?")
  print "Cool!"
- fd.write(Age)
+ 
  return Age
  
 def live():
  print "Im from England"
  Country = raw_input("And you?")
  print "cool"
- fd.write(Country)
+ 
  return Country
  
 def games():
  print "All KeenSoftwareHouse games"
  gamenames = raw_input("And yours?")
  print "Those are cool too"
- fd.write(gamenames)
+ 
  return gamenames
 
 # moved to response.xml
