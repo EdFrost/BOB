@@ -163,20 +163,9 @@ p= ["lets","play","tic","tac","toe"]
 question = raw_input("what do you want to know?, if you need help thinking of something, say: Help Me Master.")
 answerQuestion(question)
 
-question = raw_input("So, Is there anything else you want to ask?")
-answerQuestion(question)
-
-question = raw_input("So, Is there anything else you want to ask?")
-answerQuestion(question)
-
-question = raw_input("So, Is there anything else you want to ask?")
-answerQuestion(question)
-
-question = raw_input("So, Is there anything else you want to ask?")
-answerQuestion(question)
-
-question = raw_input("So, Is there anything else you want to ask?")
-answerQuestion(question)
+for i in range(5) :
+    question = raw_input("So, Is there anything else you want to ask?")
+    answerQuestion(question)
 
 #c = ET.SubElement(user, 'c')
 #d = ET.SubElement(user, 'd')
