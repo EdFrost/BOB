@@ -26,6 +26,10 @@ class Response() :
         #add this response to the xml node
         print('save to xml')
 
+    def questionString(self) :
+        #return the question in a displayable format
+        return ' '.join(self.question)
+
     def printAnswer(self) :
         choice = random.choice(self.answers)
         print(choice)
@@ -166,7 +170,7 @@ def colour():
 def helpme():
     print "this is what you can ask:"
     for response in responses :
-        print "  "+response.question+"?"
+        print "  "+response.questionString()+"?"
 
     print "  How old are you?"
     print "  How are you?"
