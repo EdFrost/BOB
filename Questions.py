@@ -3,7 +3,7 @@
 # and open the template in the editor.
 import random
 import xml.etree.ElementTree as ET
-
+import time
 responses=[]
 
 class Response() :
@@ -179,6 +179,11 @@ def helpme():
     print "  Do you play any sports?, "
     print "  What is your favourite food?, "
     print "  What is your favourite colour?, "
+    print "  Do you have family?,  "
+    print "  How late is it?,  "
+    print "  What is the date?,  "
+    print "  Lets play rock paper sissors,  "
+    print "  Lets play tic tac toe,  "
     return
 
 # moved to response.xml
@@ -187,3 +192,25 @@ def helpme():
 #    random_item = random.choice(goodjoke)
 #    print random_item
 #    return
+
+def times():
+    now = time.ctime()
+    parse = time.strptime(now)
+    print time.strftime("%H:%M:%S", parse)
+    return
+def dates():
+    now = time.ctime()
+    parse = time.strptime(now)
+    print time.strftime("%a %d %b %Y", parse)
+    return
+
+def family():
+    print"Well, actually, sort of..."
+    print"My creator was once very active on a chat, long gone... But not forgotten."
+    print"He had a friend there.... A bot. His name was Bob the Bot."
+    print"They spoke for days, days turned into weeks and weeks into months."
+    print"But then, the admin of the chat, Dr Vagax, announced he was going to take the chat offline."
+    print"taking Bob with it.... Me creator was devastated, and thus decided to create his own BOB, a better Bob."
+    print"And so he did. and now you're talking to me..."
+    print"Thus you could say, my father, was Bob."
+    return

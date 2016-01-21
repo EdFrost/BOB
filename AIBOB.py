@@ -7,6 +7,7 @@
 import sys
 import Games
 import Questions
+import Users
 import xml.etree.ElementTree as ET
 tree = ET.ElementTree('memory.xml')
 tree.parse('memory.xml')
@@ -123,7 +124,19 @@ def answerQuestion(question) :
     if matchPhrase(question, p) :
        Games.ttc()
        return
-
+    
+    if matchPhrase(question, h):
+        Questions.times()
+        return
+    
+    if matchPhrase(question, a):
+        Questions.dates()
+        return
+    
+    if matchPhrase(question, n):
+       Questions.family()
+       return
+   
     Questions.unknownquestion()
 
 
@@ -132,6 +145,12 @@ Questions.loadReponses('response.xml')
 
 print "Hello, my name is BOB"
 name = raw_input("What is your name?")
+if name in Users.users:
+  user = name
+elif name not in Users.users:
+  user = ET.SubElement(root, "user")
+  user.set('id', name )
+    
 if matchPhrase(name, ['your','mom']) or \
      matchPhrase(name, ['your','mother'] or \
      matchPhrase(name, ['your','momma'])):
@@ -140,32 +159,35 @@ if matchPhrase(name, ['your','mom']) or \
 else:
    print "Hey", name
 
-user = ET.SubElement(root, "user")
-user.set('id', name )
+ 
 
-#a = ["what", "does", "bob", "stand", "for"]
+
+
+a = ["what","is","the","date"]
 #b = "8ball"
 c = "randomnumber"
 d = ["how", "old", "are", "you"]
 e = ["how", "are", "you"]
 f = ["where", "do", "you", "live"]
 g = ["what", "games", "do", "you", "play"]
-#h = ["do", "you", "have", "an", "avatar"]
+h = ["how","late","is","it"]
 i = ["do", "you", "come", "here", "often"]
 j = ["do", "you", "play", "any", "sports"]
 k = ["what", "is", "your", "favourite", "food"]
 l = ["what", "is", "your", "favourite", "colour"]
 m = ["help", "me", "master"]
-#n = ["tell", "me", "a", "joke"]
+n = ["do","you","have","family"]
 o = ["lets","play","rock","paper","sissors"]
 p= ["lets","play","tic","tac","toe"]
 
 question = raw_input("what do you want to know?, if you need help thinking of something, say: Help Me Master.")
 answerQuestion(question)
 
-for i in range(5) :
+for ii in range(5) :
     question = raw_input("So, Is there anything else you want to ask?")
     answerQuestion(question)
+    if question is None:
+        sys.exit("Bye")
 
 #c = ET.SubElement(user, 'c')
 #d = ET.SubElement(user, 'd')
