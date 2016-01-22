@@ -1,4 +1,4 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python3
 #encoding: windows-1252
 
 # To change this license header, choose License Headers in Project Properties.
@@ -130,15 +130,15 @@ def answerQuestion(question) :
 Questions.loadReponses('response.xml')
 
 
-print "Hello, my name is BOB"
-name = raw_input("What is your name?")
+print ("Hello, my name is BOB")
+name = input("What is your name?")
 if matchPhrase(name, ['your','mom']) or \
      matchPhrase(name, ['your','mother'] or \
      matchPhrase(name, ['your','momma'])):
-   question = raw_input("Your momma who?")
-   print "I get what you mean."
+   question = input("Your momma who?")
+   print ("I get what you mean.")
 else:
-   print "Hey", name
+   print ("Hey"), name
 
 user = ET.SubElement(root, "user")
 user.set('id', name )
@@ -160,29 +160,29 @@ m = ["help", "me", "master"]
 o = ["lets","play","rock","paper","sissors"]
 p= ["lets","play","tic","tac","toe"]
 
-question = raw_input("what do you want to know?, if you need help thinking of something, say: Help Me Master.")
+question = input("what do you want to know?, if you need help thinking of something, say: Help Me Master.")
 answerQuestion(question)
 
-question = raw_input("So, Is there anything else you want to ask?")
+question = input("So, Is there anything else you want to ask?")
 answerQuestion(question)
 
-question = raw_input("So, Is there anything else you want to ask?")
+question = input("So, Is there anything else you want to ask?")
 answerQuestion(question)
 
-question = raw_input("So, Is there anything else you want to ask?")
+question = input("So, Is there anything else you want to ask?")
 answerQuestion(question)
 
-question = raw_input("So, Is there anything else you want to ask?")
+question = input("So, Is there anything else you want to ask?")
 answerQuestion(question)
 
-question = raw_input("So, Is there anything else you want to ask?")
+question = input("So, Is there anything else you want to ask?")
 answerQuestion(question)
 
 #c = ET.SubElement(user, 'c')
 #d = ET.SubElement(user, 'd')
 tree.write('memory.xml')
-print"Okay %s, thats all you can ask.... Come back another time please...." % (name)
-byebye = raw_input("Bye.")
+print ("Okay, thats all you can ask.... Come back another time please....")
+byebye = input("Bye.")
 
 
 #How is the weather?, What time is it? When is your birthday?(make him say happy birthday on that date)

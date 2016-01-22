@@ -83,7 +83,7 @@ def answerQuestionFromXML(question) :
 
 
 def unknownquestion():
- print "Sorry, I dont know what you mean"
+ print ("Sorry, I dont know what you mean")
  return
 
 # Moved to response.xml
@@ -100,36 +100,36 @@ def unknownquestion():
 
 def eastereggnumber():
  max_number = 10
- print random.choice( range(1,max_number) )
+ print (" ")+random.choice( range(1,max_number) )
  return
  
 def mood():
   feel = ["Im fine.","Im okay","I feel a bit sick.","Why would you care?"]
   random_item = random.choice(feel)
-  print random_item
-  Mood = raw_input("And you?")
-  print "okay, good for you i guess"
+  print +random_item
+  Mood = input("And you?")
+  print ("okay, good for you i guess")
   
   return Mood
  
 def age(  ):
- print "Im 40 years old."
- Age = raw_input("And you?")
- print "Cool!"
+ print ("Im 40 years old.")
+ Age = input("And you?")
+ print ("Cool!")
  
  return Age
  
 def live():
- print "Im from England"
- Country = raw_input("And you?")
- print "cool"
+ print ("Im from England")
+ Country = input("And you?")
+ print ("cool")
  
  return Country
  
 def games():
- print "All KeenSoftwareHouse games"
- gamenames = raw_input("And yours?")
- print "Those are cool too"
+ print ("All KeenSoftwareHouse games")
+ gamenames = input("And yours?")
+ print ("Those are cool too")
  
  return gamenames
 
@@ -140,41 +140,41 @@ def games():
 #    return
 
 def passingby():
-    print "Well, every now and then"
-    passing = raw_input("And you?")
-    print "Well, be safe, dont talk with strangers."
+    print ("Well, every now and then")
+    passing = input("And you?")
+    print ("Well, be safe, dont talk with strangers.")
     return passing
 
 def sports():
-    print "Bots dont do sports"
-    sport = raw_input("And you?")
-    print "Well, dont break your bones"
+    print ("Bots dont do sports")
+    sport = input("And you?")
+    print ("Well, dont break your bones")
     return sport
 
 def food():
-    print "Sadly bots dont need food"
-    foood = raw_input("And yours?")
-    print "Sounds yummie"
+    print ("Sadly bots dont need food")
+    foood = input("And yours?")
+    print ("Sounds yummie")
     return foood
 
 def colour():
-    print "Black with green letters on it."
-    colourst = raw_input("And yours?")
-    print "Thats also a nice colour."
+    print ("Black with green letters on it.")
+    colourst = input("And yours?")
+    print ("Thats also a nice colour.")
     return colourst
 
 def helpme():
-    print "this is what you can ask:"
+    print ("this is what you can ask:")
     for response in responses :
-        print "  "+response.question+"?"
+        print ("  ")+response.question+("?")
 
-    print "  How old are you?"
-    print "  How are you?"
-    print "  Where do you live?"
-    print "  Do you come here often?, "
-    print "  Do you play any sports?, "
-    print "  What is your favourite food?, "
-    print "  What is your favourite colour?, "
+    print ("  How old are you?")
+    print ("  How are you?")
+    print ("  Where do you live?")
+    print ("  Do you come here often?, ")
+    print ("  Do you play any sports?, ")
+    print ("  What is your favourite food?, ")
+    print ("  What is your favourite colour?, ")
     return
 
 # moved to response.xml

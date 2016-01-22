@@ -11,7 +11,7 @@ def RPS():
     while True:
         print("Enter your choice:")
         while True:
-            choice = raw_input('->')
+            choice = input('->')
             if choice == 'r' or choice == 'R' or choice == 'Rock' or choice == 'rock' or choice == '1':
                 choice_identifier  = 1
                 break
@@ -40,7 +40,7 @@ def RPS():
 
 
         while True:
-            answer = raw_input('Play another round?')
+            answer = input('Play another round?')
             if answer == 'y' or answer == 'Y' or answer == 'yes' or answer == 'Yes' or answer == 'ye' or answer == 'Ye' or answer == 'sure' or answer == 'Sure':
                 print(' Current score: You - ',score[0],' Computer - ',  score[1])
                 flag = 0
@@ -81,7 +81,7 @@ def ttc():
     letter = ''
     while not (letter == 'X' or letter == 'O'):
         print('Do you want to be X or O?')
-        letter = raw_input().upper()
+        letter = input().upper()
 
     # the first element in the tuple is the player's letter, the second is the computer's letter.
     if letter == 'X':
@@ -99,7 +99,7 @@ def ttc():
  def playAgain():
     # This function returns True if the player wants to play again, otherwise it returns False.
     print('Do you want to play again? (yes or no)')
-    return raw_input().lower().startswith('y')
+    return input().lower().startswith('y')
 
  def makeMove(board, letter, move):
     board[move] = letter
@@ -134,7 +134,7 @@ def ttc():
     move = ' '
     while move not in '1 2 3 4 5 6 7 8 9'.split() or not isSpaceFree(board, int(move)):
         print('What is your next move? (1-9)')
-        move = raw_input()
+        move = input()
     return int(move)
 
  def chooseRandomMoveFromList(board, movesList):
