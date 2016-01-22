@@ -3,7 +3,8 @@
 # and open the template in the editor.
 import random
 import xml.etree.ElementTree as ET
-
+import time
+from Users import *
 responses=[]
 
 class Response() :
@@ -12,6 +13,8 @@ class Response() :
         self.question=''
         self.answers=[]
         self.responseText=None
+        self.memoryKey=None
+        self.replyText=None
 
     def load(self, xmlNode) :
         #load a single response from the xmlNode
@@ -21,19 +24,33 @@ class Response() :
             if item.tag == 'answers' :
                for answerNode in item :
                    self.answers.append(answerNode.text)
+            if item.tag == 'responseText' :
+               self.responseText=item.text
+               self.memoryKey = item.attrib.get('memoryKey')
+               self.replyText = item.attrib.get('replyText')
 
     def save(self,rootNode) :
         #add this response to the xml node
         print('save to xml')
 
+    def questionString(self) :
+        #return the question in a displayable format
+        return ' '.join(self.question)
+
     def printAnswer(self) :
         choice = random.choice(self.answers)
         print(choice)
 
-    def handleAnswer(self) :
+    def handleAnswer(self, user) :
         self.printAnswer()
         if self.responseText is None :
            return True
+        answer= input(self.responseText)
+        if self.memoryKey is not None :
+           user.setAttribute(self.memoryKey, answer)
+        if self.replyText is not None :
+           print(self.replyText)
+
 
 def loadReponses(filename) :
     #load up all the question / response pairs from filename
@@ -69,7 +86,7 @@ def matchPhrase(question, phrase) :
            return False
     return True
 
-def answerQuestionFromXML(question) :
+def answerQuestionFromXML(question, user) :
     # return False if there is no xml answer for this question
     # otherwise
     #    -- if the question has a followup, display that and return the response
@@ -77,7 +94,7 @@ def answerQuestionFromXML(question) :
 
     for response in responses :
         if matchPhrase(question, response.question) :
-           return response.handleAnswer()
+           return response.handleAnswer(user)
     return False
 
 
@@ -100,24 +117,24 @@ def unknownquestion():
 
 def eastereggnumber():
  max_number = 10
- print (" ")+random.choice( range(1,max_number) )
+ print +random.choice( range(1,max_number) )
  return
  
 def mood():
   feel = ["Im fine.","Im okay","I feel a bit sick.","Why would you care?"]
-  random_item = random.choice(feel)
+  random_item = +random.choice(feel)
   print +random_item
   Mood = input("And you?")
   print ("okay, good for you i guess")
   
   return Mood
- 
-def age(  ):
- print ("Im 40 years old.")
- Age = input("And you?")
- print ("Cool!")
- 
- return Age
+
+# moved to response.xml
+#def age(  ):
+# print "Im 40 years old."
+#Age = raw_input("And you?")
+# print "Cool!"
+# return Age
  
 def live():
  print ("Im from England")
@@ -166,7 +183,7 @@ def colour():
 def helpme():
     print ("this is what you can ask:")
     for response in responses :
-        print ("  ")+response.question+("?")
+        print ("  ")+response.questionString()+("?")
 
     print ("  How old are you?")
     print ("  How are you?")
@@ -175,6 +192,11 @@ def helpme():
     print ("  Do you play any sports?, ")
     print ("  What is your favourite food?, ")
     print ("  What is your favourite colour?, ")
+    print ("  Do you have family?,  ")
+    print ("  How late is it?,  ")
+    print ("  What is the date?,  ")
+    print ("  Lets play rock paper sissors,  ")
+    print ("  Lets play tic tac toe,  ")
     return
 
 # moved to response.xml
@@ -183,3 +205,25 @@ def helpme():
 #    random_item = random.choice(goodjoke)
 #    print random_item
 #    return
+
+def times():
+    now = time.ctime()
+    parse = time.strptime(now)
+    print time.strftime("%H:%M:%S", parse)
+    return
+def dates():
+    now = time.ctime()
+    parse = time.strptime(now)
+    print time.strftime("%a %d %b %Y", parse)
+    return
+
+def family():
+    print("Well, actually, sort of...")
+    print("My creator was once very active on a chat, long gone... But not forgotten.")
+    print("He had a friend there.... A bot. His name was Bob the Bot.")
+    print("They spoke for days, days turned into weeks and weeks into months.")
+    print("But then, the admin of the chat, Dr Vagax, announced he was going to take the chat offline.")
+    print("taking Bob with it.... Me creator was devastated, and thus decided to create his own BOB, a better Bob.")
+    print("And so he did. and now you're talking to me...")
+    print("Thus you could say, my father, was Bob.")
+    return

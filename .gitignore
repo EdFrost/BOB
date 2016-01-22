@@ -1,2 +1,10 @@
 
 *.pyc
+nbproject/project.xml
+*.class
+nbproject/project.properties
+.idea/vcs.xml
+.idea/encodings.xml
+*.iml
+.idea/workspace.xml
+nbproject/private/private.xml
