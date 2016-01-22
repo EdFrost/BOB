@@ -3,7 +3,7 @@
 # and open the template in the editor.
 import random
 import xml.etree.ElementTree as ET
-import time
+from time import localtime, strftime, ctime, strptime
 from Users import *
 responses=[]
 
@@ -117,16 +117,16 @@ def unknownquestion():
 
 def eastereggnumber():
  max_number = 10
- print +random.choice( range(1,max_number) )
+ print (""),+random.choice( range(1,max_number) )
  return
- 
+
 def mood():
   feel = ["Im fine.","Im okay","I feel a bit sick.","Why would you care?"]
   random_item = +random.choice(feel)
-  print +random_item
+  print (""),+random_item
   Mood = input("And you?")
   print ("okay, good for you i guess")
-  
+
   return Mood
 
 # moved to response.xml
@@ -135,19 +135,19 @@ def mood():
 #Age = raw_input("And you?")
 # print "Cool!"
 # return Age
- 
+
 def live():
  print ("Im from England")
  Country = input("And you?")
  print ("cool")
- 
+
  return Country
- 
+
 def games():
  print ("All KeenSoftwareHouse games")
  gamenames = input("And yours?")
  print ("Those are cool too")
- 
+
  return gamenames
 
 # moved to response.xml
@@ -207,14 +207,14 @@ def helpme():
 #    return
 
 def times():
-    now = time.ctime()
-    parse = time.strptime(now)
-    print time.strftime("%H:%M:%S", parse)
+    now = ctime()
+    parse = strptime(now)
+    print (""), strftime("%H:%M:%S",parse )
     return
 def dates():
     now = time.ctime()
     parse = time.strptime(now)
-    print time.strftime("%a %d %b %Y", parse)
+    print (""),+time.strftime("%a %d %b %Y", parse)
     return
 
 def family():
