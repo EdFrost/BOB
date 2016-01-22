@@ -1,10 +1,14 @@
 
 *.pyc
-nbproject/project.xml
-*.class
-nbproject/project.properties
-.idea/vcs.xml
+Questions$py.class
+Games$py.class
 .idea/encodings.xml
 *.iml
-.idea/workspace.xml
+.idea/modules.xml
+nbproject/project.properties
+.idea/.name
 nbproject/private/private.xml
+.idea/misc.xml
+.idea/vcs.xml
+.idea/workspace.xml
+nbproject/project.xml
