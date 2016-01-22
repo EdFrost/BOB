@@ -3,6 +3,29 @@
 # and open the template in the editor.
 
 import random
+Def quickrobotics():
+Print("okay, i got 3 multiple choice questions about the laws of robotics.")
+A = A robot may not injure a human being or, through inaction, allow a human being to come to harm.
+B = A robot must obey the orders given it by human beings except where such orders would conflict with the First Law.
+C = A robot must protect its own existence as long as such protection does not conflict with the First or Second Laws.
+Ab = yeh
+Ac = neh
+
+ while True:
+   
+    print ("a", A)
+    print ("b", Ab)
+    print ("c", Ac)
+     while True:
+      choice = input('->')
+      if choice == 'a' or choice == 'A'
+        print("Thats correct")
+        break
+      elif choice in ['b', 'B','c','C']
+        print("thats wrong.")
+        break
+    
+Return
 def RPS():
     print ("Goodluck beating me with this one... Im a Rock...")
     comp_possible  = 1,2,3
