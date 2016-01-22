@@ -55,7 +55,7 @@
         <answers>
             <answer>Im 40 years old.</answer>
         </answers>
-        <responseText memoryKey="Age" reply="Cool!">And you?</responseText>
+        <responseText memoryKey="Age" replyText="Cool!">And you?</responseText>
     </response>
     <response>
         <question>how are you</question>
@@ -65,7 +65,7 @@
             <answer>I feel a bit sick.</answer>
             <answer>Why would you care?</answer>
         </answers>
-        <responseText memoryKey="Mood" reply="okay, good for you i guess">And You?</responseText>
+        <responseText memoryKey="Mood" replyText="okay, good for you i guess">And You?</responseText>
     </response>
- 
+
 </root>

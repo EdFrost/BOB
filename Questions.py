@@ -42,6 +42,9 @@ class Response() :
         print(choice)
 
     def handleAnswer(self, user) :
+        # Display the answer for this question
+        #  -- if the question has a followup, display that and "ask" the response
+
         self.printAnswer()
         if self.responseText is None :
            return True
@@ -50,6 +53,7 @@ class Response() :
            user.setAttribute(self.memoryKey, answer)
         if self.replyText is not None :
            print(self.replyText)
+        return True
 
 
 def loadReponses(filename) :
@@ -88,9 +92,7 @@ def matchPhrase(question, phrase) :
 
 def answerQuestionFromXML(question, user) :
     # return False if there is no xml answer for this question
-    # otherwise
-    #    -- if the question has a followup, display that and return the response
-    #    -- if the question has no followup, just return true
+    # otherwise return True
 
     for response in responses :
         if matchPhrase(question, response.question) :
