@@ -209,12 +209,12 @@ def helpme():
 def times():
     now = ctime()
     parse = strptime(now)
-    print (""), strftime("%H:%M:%S",parse )
+    print ("", strftime("%H:%M:%S",parse ))
     return
 def dates():
-    now = time.ctime()
-    parse = time.strptime(now)
-    print (""),+time.strftime("%a %d %b %Y", parse)
+    now = ctime()
+    parse = strptime(now)
+    print ("",strftime("%a %d %b %Y", parse))
     return
 
 def family():

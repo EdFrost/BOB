@@ -141,7 +141,7 @@ if matchPhrase(name, ['your','mom']) or \
    question = input("Your momma who?")
    print ("I get what you mean.")
 else:
-   print ("Hey"), name
+   print ("Hey", name)
 
 
 a = ["what","is","the","date"]
@@ -173,7 +173,8 @@ for ii in range(5) :
 #c = ET.SubElement(user, 'c')
 #d = ET.SubElement(user, 'd')
 tree.write('memory.xml')
-print("Okay"), name(", thats all you can ask.... Come back another time please....")
+print("Okay", name)
+print("Thats all you can ask.... Come back another time please....")
 byebye = input("Bye.")
 
 
