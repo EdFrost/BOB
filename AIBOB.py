@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+
 #encoding: windows-1252
 
 # To change this license header, choose License Headers in Project Properties.
