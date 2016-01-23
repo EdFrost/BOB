@@ -199,6 +199,7 @@ def helpme():
     print ("  What is the date?,  ")
     print ("  Lets play rock paper sissors,  ")
     print ("  Lets play tic tac toe,  ")
+    print("  Lets do a little quiz,  ")
     return
 
 # moved to response.xml
