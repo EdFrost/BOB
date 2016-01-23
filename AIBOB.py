@@ -120,7 +120,10 @@ def answerQuestion(question) :
     if matchPhrase(question, n):
        Questions.family()
        return
-   
+
+    if matchPhrase(question, e):
+       Games.quizrobotics()
+       return
     Questions.unknownquestion()
 
 Questions.loadReponses('response.xml')
@@ -148,7 +151,7 @@ a = ["what","is","the","date"]
 #b = "8ball"
 c = "randomnumber"
 #d = ["how", "old", "are", "you"]
-#e = ["how", "are", "you"]
+e = ["Lets", "do","a","little","quiz"]
 f = ["where", "do", "you", "live"]
 g = ["what", "games", "do", "you", "play"]
 h = ["how","late","is","it"]

@@ -3,29 +3,68 @@
 # and open the template in the editor.
 
 import random
-Def quickrobotics():
-Print("okay, i got 3 multiple choice questions about the laws of robotics.")
-A = A robot may not injure a human being or, through inaction, allow a human being to come to harm.
-B = A robot must obey the orders given it by human beings except where such orders would conflict with the First Law.
-C = A robot must protect its own existence as long as such protection does not conflict with the First or Second Laws.
-Ab = yeh
-Ac = neh
 
- while True:
-   
-    print ("a", A)
-    print ("b", Ab)
-    print ("c", Ac)
-     while True:
-      choice = input('->')
-      if choice == 'a' or choice == 'A'
-        print("Thats correct")
-        break
-      elif choice in ['b', 'B','c','C']
-        print("thats wrong.")
-        break
-    
-Return
+
+
+
+
+
+
+def quizrobotics():
+  print("okay, i got 3 multiple choice questions about the laws of robotics.")
+  aa = "A robot may not injure a human being or, through inaction, allow a human being to come to harm."
+  ba = "A robot must obey the orders given it by human beings except where such orders would conflict with the First Law."
+  ca = "A robot must protect its own existence as long as such protection does not conflict with the First or Second Laws."
+  ab = "yeh"
+  ac = "neh"
+  bb = "yeh"
+  bc = "neh"
+  cb = "yeh"
+  cc = "neh"
+
+  print("a", aa)
+  print("b", ab)
+  print("c", ac)
+
+  choice = input("")
+  while choice :
+    if choice in ["a", "A"]:
+      print("Thats correct")
+      break
+    else:# choice in ["b", "B","c","C"]:
+     print("thats wrong.")
+     break
+
+
+  print("Okay, next question")
+  print("a", ba)
+  print("b", bb)
+  print("c", bc)
+  choice2 = input("")
+  while choice2:
+       if choice2 in ["a","A"]:
+          print("Thats correct")
+          break
+       elif choice2 in ["b", "B","c","C"]:
+          print("Thats wrong.")
+          break
+
+
+  print("last one.")
+  print("a", ca)
+  print("b", cb)
+  print("c", cc)
+  choice3 = input("")
+  while choice3:
+       if choice3 in ["a","A"]:
+          print("Thats correct")
+          break
+       elif choice3 in ["b", "B","c","C"]:
+          print("Thats wrong.")
+          break
+
+  return
+
 def RPS():
     print ("Goodluck beating me with this one... Im a Rock...")
     comp_possible  = 1,2,3
