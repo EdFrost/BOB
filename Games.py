@@ -15,12 +15,13 @@ def quizrobotics():
   aa = "A robot may not injure a human being or, through inaction, allow a human being to come to harm."
   ba = "A robot must obey the orders given it by human beings except where such orders would conflict with the First Law."
   ca = "A robot must protect its own existence as long as such protection does not conflict with the First or Second Laws."
-  ab = "yeh"
-  ac = "neh"
-  bb = "yeh"
-  bc = "neh"
-  cb = "yeh"
-  cc = "neh"
+  ab =  "A robot may not injure a human being, allow a human being to come to harm unless it's nanomachines which alters the DNA structure."
+  ac = "A robot may injure a human being, but cannot allow a human being to come to harm unless it comes out from this dilemma"
+  bb =  "A robot must obey the orders given it by human beings and always calls them 'my master' except where such orders would conflict with the laws of natual gravity."
+  bc =  "A robot must obey the orders given it by animals except where such orders given in any known human language."
+  cb =  "A robot must always protect Rotal as long as such protection does not conflict with the First or Second Laws of Feminism."
+  cc = "A robot must protect its own existence by multiplying continuously until such protection does not conflict with the First or Second Laws."
+
 
   print("a", aa)
   print("b", ab)
