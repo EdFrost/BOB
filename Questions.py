@@ -185,7 +185,7 @@ def colour():
 def helpme():
     print ("this is what you can ask:")
     for response in responses :
-        print ("  ")+response.questionString()+("?")
+        print ("  "+response.questionString()+"?")
 
     print ("  How old are you?")
     print ("  How are you?")
