@@ -122,14 +122,14 @@ def eastereggnumber():
  print (""),+random.choice( range(1,max_number) )
  return
 
-def mood():
-  feel = ["Im fine.","Im okay","I feel a bit sick.","Why would you care?"]
-  random_item = +random.choice(feel)
-  print (""),+random_item
-  Mood = input("And you?")
-  print ("okay, good for you i guess")
+#def mood():
+ # feel = ["Im fine.","Im okay","I feel a bit sick.","Why would you care?"]
+  #random_item = +random.choice(feel)
+  #print (""),+random_item
+  #Mood = input("And you?")
+  #print ("okay, good for you i guess")
 
-  return Mood
+  #return Mood
 
 # moved to response.xml
 #def age(  ):
@@ -138,19 +138,19 @@ def mood():
 # print "Cool!"
 # return Age
 
-def live():
- print ("Im from England")
- Country = input("And you?")
- print ("cool")
+#def live():
+ #print ("Im from England")
+ #Country = input("And you?")
+ #print ("cool")
 
- return Country
+ #return Country
 
-def games():
- print ("All KeenSoftwareHouse games")
- gamenames = input("And yours?")
- print ("Those are cool too")
+#def games():
+ #print ("All KeenSoftwareHouse games")
+ #gamenames = input("And yours?")
+ #print ("Those are cool too")
 
- return gamenames
+ #return gamenames
 
 # moved to response.xml
 #def picture():
@@ -164,36 +164,32 @@ def passingby():
     print ("Well, be safe, dont talk with strangers.")
     return passing
 
-def sports():
-    print ("Bots dont do sports")
-    sport = input("And you?")
-    print ("Well, dont break your bones")
-    return sport
+#def sports():
+ #   print ("Bots dont do sports")
+  #  sport = input("And you?")
+   # print ("Well, dont break your bones")
+    #return sport
 
-def food():
-    print ("Sadly bots dont need food")
-    foood = input("And yours?")
-    print ("Sounds yummie")
-    return foood
+#def food():
+#   print ("Sadly bots dont need food")
+#  foood = input("And yours?")
+ # print ("Sounds yummie")
+ #return foood
 
-def colour():
-    print ("Black with green letters on it.")
-    colourst = input("And yours?")
-    print ("Thats also a nice colour.")
-    return colourst
+#def colour():
+#    print ("Black with green letters on it.")
+#    colourst = input("And yours?")
+#    print ("Thats also a nice colour.")
+#    return colourst
 
 def helpme():
     print ("this is what you can ask:")
     for response in responses :
         print ("  ")+response.questionString()+("?")
 
-    print ("  How old are you?")
-    print ("  How are you?")
-    print ("  Where do you live?")
+
+
     print ("  Do you come here often?, ")
-    print ("  Do you play any sports?, ")
-    print ("  What is your favourite food?, ")
-    print ("  What is your favourite colour?, ")
     print ("  Do you have family?,  ")
     print ("  How late is it?,  ")
     print ("  What is the date?,  ")

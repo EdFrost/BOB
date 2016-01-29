@@ -47,20 +47,8 @@ def answerQuestion(question) :
         Questions.eastereggnumber()
         return
 
-    if matchPhrase(question, f) :
-      Country = Questions.live()
-      Living = ET.SubElement(user, "Country")
-      Living.text=str(Country)
-      Living.set('id', "Country =")
-      tree.write('memory.xml')
-      return
 
-    if matchPhrase(question, g) :
-      Game = ET.SubElement(user, "Games")
-      Game.text=str(Games)
-      Game.set('id', "Games =")
-      tree.write('memory.xml')
-      return
+
 
     if matchPhrase(question, i) :
       Passing = Questions.passingby()
@@ -70,29 +58,8 @@ def answerQuestion(question) :
       tree.write('memory.xml')
       return
 
-    if matchPhrase(question, j) :
-      Sport = Questions.sports()
-      sporting = ET.SubElement(user, "Sports")
-      sporting.text=str(Sport)
-      sporting.set('id', "Sports =")
-      tree.write('memory.xml')
-      return
 
-    if matchPhrase(question, k) :
-      Food = Questions.food()
-      foood = ET.SubElement(user, "Food")
-      foood.text=str(Food)
-      foood.set('id', "Food =")
-      tree.write('memory.xml')
-      return
 
-    if matchPhrase(question, l) :
-      colourst = Questions.colour()
-      Colour = ET.SubElement(user, "Colour")
-      Colour.text=str(colourst)
-      Colour.set('id', "Colour =")
-      tree.write('memory.xml')
-      return
 
     if matchPhrase(question, m) or matchPhrase(question,['help']) :
        Questions.helpme()
@@ -133,7 +100,7 @@ print ("Hello, my name is BOB")
 name = input("What is your name?")
 user = User.find(name)
 if user is None :
-   user = User.newUser(name)
+ user = User.newUser(name)
 
 #update name from actual user db to fix any caps problems
 name = user.name
@@ -152,13 +119,13 @@ a = ["what","is","the","date"]
 c = "randomnumber"
 #d = ["how", "old", "are", "you"]
 e = ["Lets", "do","a","little","quiz"]
-f = ["where", "do", "you", "live"]
-g = ["what", "games", "do", "you", "play"]
-h = ["how","late","is","it"]
+#f = ["where", "do", "you", "live"]
+#g = ["what", "games", "do", "you", "play"]
+#h = ["how","late","is","it"]
 i = ["do", "you", "come", "here", "often"]
-j = ["do", "you", "play", "any", "sports"]
-k = ["what", "is", "your", "favourite", "food"]
-l = ["what", "is", "your", "favourite", "colour"]
+#j = ["do", "you", "play", "any", "sports"]
+#k = ["what", "is", "your", "favourite", "food"]
+#l = ["what", "is", "your", "favourite", "colour"]
 m = ["help", "me", "master"]
 n = ["do","you","have","family"]
 o = ["lets","play","rock","paper","sissors"]
@@ -168,7 +135,8 @@ question = input("what do you want to know?, if you need help thinking of someth
 answerQuestion(question)
 
 for ii in range(5) :
-    question = input("So, Is there anything else you want to ask?")
+    print("So, Is there anything else you want to ask?")
+    question = input("user:")
     answerQuestion(question)
     if question is None:
         sys.exit("Bye")

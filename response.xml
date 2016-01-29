@@ -67,5 +67,42 @@
         </answers>
         <responseText memoryKey="Mood" replyText="okay, good for you i guess">And You?</responseText>
     </response>
+    <response>
+        <question>where do you live</question>
+            <answers>
+                <answer>im from england.</answer>
+            </answers>
+        <responseText memoryKey="Country" replyText="Cool, Love that place.">And you?</responseText>
+    </response>
+    <response>
+        <question>do you play any sports</question>
+            <answers>
+                <answer>No... Bots cant sport remember....</answer>
+            </answers>
+
+        <responseText memoryKey="Sports" replyText="Cool.">And you?</responseText>
+    </response>
+    <response>
+        <question>What games do you play</question>
+            <answers>
+                <answer>All KeenSoftwareHouse games</answer>
+            </answers>
+        <responseText memoryKey="Games" replyText="Cool.">And you?</responseText>
+    </response>
+    <response>
+        <question>what food do you like</question>
+            <answers>
+                <answer>Well, to be honest... Bots cant eat, so... yeah, i cant really answer that sadly.</answer>
+            </answers>
+        <responseText memoryKey="Food" replyText="Sounds Yummie"> And you?</responseText>
+    </response>
+    <response>
+        <question>what is your favourite colour</question>
+            <answers>
+                <answer>Black with green letters on it.</answer>
+            </answers>
+        <responseText memoryKey="Colour" replyText="That is also nice">And you? </responseText>
+    </response>
+
 
 </root>
