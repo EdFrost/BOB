@@ -185,7 +185,7 @@ def passingby():
 def helpme():
     print ("this is what you can ask:")
     for response in responses :
-        print ("  ")+response.questionString()+("?")
+        print ("  " + response.questionString() + "?")
 
 
 
