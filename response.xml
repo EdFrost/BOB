@@ -103,6 +103,24 @@
             </answers>
         <responseText memoryKey="Colour" replyText="That is also nice">And you? </responseText>
     </response>
+    <response>
+        <question>hi</question>
+            <answers>
+                <answer>We all ready said hi.</answer>
+            </answers>
+        
+    </response>
+    <response>
+        <question>what are you doing</question>
+            <answers>
+                <answer>Talking with you.</answer>
+                <answer>Nothing important.</answer>
+                <answer>Why you asking....</answer>
+                <answer>Im doing enough atm...</answer>
+            </answers>
+        <responseText memoryKey="Doing" replyText="I see.">And you? </responseText>
+    </response>
+
 
 
 </root>
