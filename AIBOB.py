@@ -95,10 +95,14 @@ Questions.loadReponses('response.xml')
 User.loadUserMemory('memory.xml')
 
 print ("Hello, my name is BOB")
-name = input("What is your name?")
-user = User.find(name)
-if user is None:
-    user = User.newUser(name)
+print ("What is your name?")
+name = input("")
+useer = User.find(name)
+
+if useer is None:
+   user = User.newUser(name)
+else:
+   user = useer.name
 
 # update name from actual user db to fix any caps problems
 name = user.name
